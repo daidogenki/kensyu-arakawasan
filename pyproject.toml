@@ -28,7 +28,10 @@ dependencies = [
     "psutil>=5.9.0",
     "scikit-learn>=1.3.0",
     "sentence-transformers>=2.2.0",
-    "scipy>=1.10.0"
+    "scipy>=1.10.0",
+    "torch",
+    "torchvision",
+    "torchaudio"
 ]
 
 [project.optional-dependencies]
@@ -42,3 +45,5 @@ include = ["pdfhikaku*"]
 [tool.uv.pip]
 index-url = "https://download.pytorch.org/whl/cpu"
 extra-index-url = ["https://pypi.org/simple"]
+
+# CPU版PyTorchを使用するための設定
