@@ -5,3 +5,10 @@ build:
   runtime: python3.11
   package_manager: uv
   entrypoint: pdfhikaku.py
+
+deploy:
+  memory: 4Gi
+  cpu: 2
+  timeout: 600s
+  min_instances: 0
+  max_instances: 1
