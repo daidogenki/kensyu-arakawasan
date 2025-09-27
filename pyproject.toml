@@ -46,4 +46,13 @@ include = ["pdfhikaku*"]
 index-url = "https://download.pytorch.org/whl/cpu"
 extra-index-url = ["https://pypi.org/simple"]
 
-# CPU版PyTorchを使用するための設定
+# CPU版PyTorchを明示的にピン留め
+[tool.uv]
+constraint-dependencies = [
+    "torch @ https://download.pytorch.org/whl/cpu/torch-2.4.1%2Bcpu-cp311-cp311-linux_x86_64.whl ; python_version == '3.11'",
+    "torch @ https://download.pytorch.org/whl/cpu/torch-2.4.1%2Bcpu-cp312-cp312-linux_x86_64.whl ; python_version == '3.12'",
+    "torchvision @ https://download.pytorch.org/whl/cpu/torchvision-0.19.1%2Bcpu-cp311-cp311-linux_x86_64.whl ; python_version == '3.11'",
+    "torchvision @ https://download.pytorch.org/whl/cpu/torchvision-0.19.1%2Bcpu-cp312-cp312-linux_x86_64.whl ; python_version == '3.12'",
+    "torchaudio @ https://download.pytorch.org/whl/cpu/torchaudio-2.4.1%2Bcpu-cp311-cp311-linux_x86_64.whl ; python_version == '3.11'",
+    "torchaudio @ https://download.pytorch.org/whl/cpu/torchaudio-2.4.1%2Bcpu-cp312-cp312-linux_x86_64.whl ; python_version == '3.12'"
+]
